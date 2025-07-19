@@ -6,22 +6,20 @@ public class LinearSearch {
         System.out.println(linearSearch(arr, 28));
     }
 
-    static int linearSearch(int[] arr, int target){
+    static boolean linearSearch(int[] arr, int target){
 
         if (arr.length ==0 ){
-            return -1;
+            return false;
         }
 
-        for (int index = 0; index < arr.length; index++){
+        for (int element : arr) {
 
-            int element = arr[index];
-
-            if (element == target){
-                return index;
+            if (element == target) {
+                return true;
             }
 
         }
 
-        return -1;
+        return false;
     }
 }
